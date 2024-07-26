@@ -76,7 +76,7 @@ export default function Process({ code, additionalText }) {
           }
         }
         break;
-
+      
       case 'MVI':
         if (operands.length === 2) {
           const reg = operands[0];
@@ -366,6 +366,8 @@ export default function Process({ code, additionalText }) {
             console.log('Invalid ORI instruction format:', operands);
             }
         break;
+        case 'HLT':
+          break;
         case 'ORA':
           if (operands.length === 1) {
             const srcReg = operands[0];
